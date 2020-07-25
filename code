@@ -1,0 +1,18 @@
+//author :  bilal hassan sady
+
+
+int sensorpin = sensorpin ; ///ضع هنا منفذ الحساس الرقمى
+int speaker = speakerpin ; ///ضع منفذ السماعة الموجب
+void setup(){
+  pinMode(sensorpin,INPUT);
+  pinMode(speakerpin,OUTPUT);
+}
+void loop(){
+  int x = digitalRead(sensorpin);
+  if(x==1){
+    tone(speakerpin,250);
+  }
+  else{
+    noTone(speakerpin); 
+  }
+}
